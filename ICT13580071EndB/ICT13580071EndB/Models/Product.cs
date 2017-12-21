@@ -7,7 +7,7 @@ using SQLite;
 
 namespace ICT13580071EndB.Models
 {
-    class Product
+     public class Product
     {
         [PrimaryKey]
         [AutoIncrement]
