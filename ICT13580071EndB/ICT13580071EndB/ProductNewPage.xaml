@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ICT13580071EndB.ProductNewPage">
+    <Grid>
+        <Image
+            Source=""
+            Aspect="Fill"/>
+        <ScrollView>
+            <Frame
+                Margin="30"
+                CornerRadius="20"
+                BackgroundColor="#C0FFFFFF"
+                VerticalOptions="Start">
+                <StackLayout
+                    Orientation="Vertical">
+                    <Label
+                        x:Name="titleLabel"
+                        Text="ค้นหาสินค้ารถมือสอง"
+                        HorizontalTextAlignment="Center"
+                        FontSize="20"
+                        FontAttributes="Bold"/>
+                    <Label
+                        Text="ประเภทรถ"
+                        TextColor="Aqua"
+                        FontSize="14"/>
+                    <Picker
+                        x:Name="TypecarPicker"
+                        Title="ประเภทรถ"
+                        BackgroundColor="#B0FFFFFF"/>
+                    <Label
+                        Text="ยี่ห้อ"
+                        TextColor="Aqua"
+                        FontSize="14"/>
+                    <Picker
+                        x:Name="BrandPicker"
+                        Title="ยื่อห้อ"
+                        BackgroundColor="#B0FFFFFF"/>
+                    <Label
+                        Text="รุ่น"
+                        TextColor="Aqua"
+                        FontSize="14"/>
+
+                    <Entry
+                        x:Name="TypeEntry"
+                        Placeholder="รุ่น"
+                        BackgroundColor="#B0FFFFFF"/>
+                    <Label
+                            Text="ปี"
+                            TextColor="#008699"
+                            FontSize="14" />
+                    <Stepper
+                        Maximum="3000"
+                        Minimum="0"
+                        Value="0"
+                        Increment="1"
+                        x:Name="YearStepper"/>
+                    <Label
+                            Text="เลขไมล์(กม)"
+                            TextColor="#008699"
+                            FontSize="14"/>
+                    <Slider
+                            Maximum="100000"
+                            Minimum="0"
+                            Value="50"
+                            x:Name="MileSlider"/>
+                    <Label
+                        Text="สี"
+                        TextColor="Aqua"
+                        FontSize="14"/>
+                    <Picker
+                        x:Name="ColorPicker"
+                        Title="สีรถ"
+                        BackgroundColor="#B0FFFFFF"/>
+                    <Label
+                            FontSize="14"
+                            Text="ดีเลอร์?"
+                            TextColor="Green" />
+                    <Switch
+                            x:Name="DelorEntry" />
+                    <Label
+                        Text="รายละเอียด"
+                        TextColor="Aqua"
+                        FontSize="14"/>
+                    <Editor
+                        x:Name="descriptionEditor"
+                        HeightRequest="100"
+                        BackgroundColor="#B0FFFFFF"/>
+                    <Label
+                        Text="ราคา"
+                        TextColor="Aqua"
+                        FontSize="14"/>
+
+                    <Entry
+                        x:Name="PriceEntry"
+                        Placeholder="ราคา"
+                        BackgroundColor="#B0FFFFFF"/>
+                    <Label
+                        Text="จังหวัด"
+                        TextColor="Aqua"
+                        FontSize="14"/>
+                    <Picker
+                        x:Name="ProvicePicker"
+                        Title="จังหวัด"
+                        BackgroundColor="#B0FFFFFF"/>
+                    <Label
+                        Text="เบอร์โทร"
+                        TextColor="Aqua"
+                        FontSize="14"/>
+
+                    <Entry
+                        x:Name="PhoneEntry"
+                        Placeholder="เบอร์"
+                        BackgroundColor="#B0FFFFFF"/>
+                    <Grid
+                        Margin="0,10,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Button
+                            x:Name="cancelButton"
+                            Text="ยกเลิก"
+                            TextColor="White"
+                            BackgroundColor="Red"/>
+
+                        <Button
+                            x:Name="saveButton"
+                            Text="ค้นหา"
+                            TextColor="White"
+                            BackgroundColor="Green"
+                            Grid.Column="1"/>
+
+
+
+
+                    </Grid>
+                </StackLayout>
+
+
+            </Frame>
+
+
+        </ScrollView>
+    </Grid>
+
+
+
+
+</ContentPage>

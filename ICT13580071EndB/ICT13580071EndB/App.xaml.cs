@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ICT13580071EndB.Helpers;
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,28 +9,32 @@ using Xamarin.Forms;
 
 namespace ICT13580071EndB
 {
-    public partial class App : Application
-    {
-        public App()
-        {
-            InitializeComponent();
 
-            MainPage = new ICT13580071EndB.MainPage();
-        }
-
-        protected override void OnStart()
+        public partial class App : Application
         {
-            // Handle when your app starts
-        }
+            public static DbHelper DbHelper { get; set; }
+            public App(string dbPath)
+            {
+                InitializeComponent();
 
-        protected override void OnSleep()
-        {
-            // Handle when your app sleeps
-        }
+                DbHelper = new DbHelper(dbPath);
 
-        protected override void OnResume()
-        {
-            // Handle when your app resumes
+                MainPage = new NavigationPage(new MainPage());
+            }
+
+            protected override void OnStart()
+            {
+                // Handle when your app starts
+            }
+
+            protected override void OnSleep()
+            {
+                // Handle when your app sleeps
+            }
+
+            protected override void OnResume()
+            {
+                // Handle when your app resumes
+            }
         }
     }
-}
